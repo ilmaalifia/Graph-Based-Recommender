@@ -4,12 +4,14 @@ import os
 import subprocess as sub
 import sys
 
-def run_lastfm(k, iterations):
+def run(k, iterations, file):
     if k.isnumeric() and iterations.isnumeric():
-        command = 'python lastfm_test.py ' + k + ' ' + iterations
+        command = 'python ' + file + '.py ' + k + ' ' + iterations
         os.system(command)
     else:
         tkinter.messagebox.showinfo("Peringatan", "Nilai parameter harus numerik!")
+
+file = sys.argv[1]
 
 master = Tk()
 master.title('Algoritma SCLUB-CD')
@@ -53,7 +55,7 @@ k.trace("w", k_callback)
 iterations.trace("w", iterations_callback)
 
 Label(bottomdownframe, text = '', font='Arial 12').pack()
-button = Button(bottomdownframe, bg = 'green', fg = 'white', text = 'JALANKAN', font='Arial 10 bold', width = 20, height = 2, activebackground = 'gray', activeforeground = 'white', command = lambda: run_lastfm(k.get(), iterations.get()))
+button = Button(bottomdownframe, bg = 'green', fg = 'white', text = 'JALANKAN', font='Arial 10 bold', width = 20, height = 2, activebackground = 'gray', activeforeground = 'white', command = lambda: run(k.get(), iterations.get(), file))
 button.pack(expand = True)
 Label(bottomdownframe, text = '', font='Arial 12').pack()
 

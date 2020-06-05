@@ -11,8 +11,8 @@ import sys
 
 time_run = datetime.datetime.now().strftime('_%d_%m - %H_%M_%S') 
 
-store_file = 'D:/OneDrive - Institut Teknologi Bandung/Tugas Akhir/Kode/Bukalapak Preprocessed/'
-results_folder = 'D:/OneDrive - Institut Teknologi Bandung/Tugas Akhir/Kode/Output/Bukalapak/10_1000/'
+store_file = 'Directory of Bukalapak Preprocessed Data'
+results_folder = 'Directory for Result'
 
 user_json = np.load(store_file + 'bukalapak_user_json.npy', allow_pickle = True).item()
 article_features = Normalizer().fit_transform(np.load(store_file + 'bukalapak_item_feature.npy', allow_pickle = True))
@@ -106,7 +106,6 @@ plt.figure(figsize = (5,5))
 plt.plot(louvain_n_cluster, label = 'SCLUB-CD + Louvain',color = 'r', marker = 'X', linewidth = 1, markevery = 0.1, markersize = 8)
 plt.plot(gnmc_n_cluster, label = 'SCLUB-CD + GNMC',color = 'b', marker = 'o', linewidth = 1, markevery = 0.1, markersize = 8)
 plt.legend(loc = 'best',fontsize = 12)
-# plt.ylim([0,100])
 plt.yticks(rotation = 90)
 plt.ylabel('Cluster Number', fontsize = 12)
 plt.xlabel('Time', fontsize = 12)
