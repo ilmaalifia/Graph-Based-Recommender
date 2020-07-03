@@ -11,8 +11,8 @@ import sys
 
 time_run = datetime.datetime.now().strftime('_%d_%m - %H_%M_%S') 
 
-store_file = 'Directory of Last.FM Preprocessed Data'
-results_folder = 'Directory for Result'
+store_file = 'data/'
+results_folder = 'output/'
 
 user_json = np.load(store_file + 'lastfm_user_json.npy', allow_pickle = True).item()
 article_features = Normalizer().fit_transform(np.load(store_file + 'lastfm_item_feature.npy', allow_pickle = True))

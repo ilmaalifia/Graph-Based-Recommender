@@ -59,12 +59,4 @@ button = Button(bottomdownframe, bg = 'green', fg = 'white', text = 'JALANKAN', 
 button.pack(expand = True)
 Label(bottomdownframe, text = '', font='Arial 12').pack()
 
-# Label(bottomdownframe, text = '      Durasi Algoritma GN-MC      ', font='Arial 10').pack(side = LEFT, expand = True, fill = BOTH)
-# Text(bottomdownframe, height = 1, width = 30).pack(side = LEFT, expand = True, fill = BOTH)
-# Label(bottomdownframe, text = '', font='Arial 12').pack(side = RIGHT)
-
-# Label(resultframe, text = '      Durasi Algoritma Louvain      ', font='Arial 10').pack(side = LEFT, expand = True, fill = BOTH)
-# Text(resultframe, height = 1, width = 30).pack(side = LEFT, expand = True, fill = BOTH)
-# Label(resultframe, text = '', font='Arial 12').pack(side = RIGHT)
-
 mainloop()
